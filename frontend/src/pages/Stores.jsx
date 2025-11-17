@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { ratingAPI, storesAPI } from "../services/api.js";
+import { ratingsAPI, storesAPI } from "../services/api.js";
 import { AnimatePresence, motion as Motion } from "framer-motion";
 import RatingStars from "../components/RatingStars.jsx"
 import LoadingSpinner from "../components/Loadingspinner.jsx";
@@ -47,7 +47,7 @@ const Stores = () => {
 
         setSubmitting(true);
         try{
-            await ratingAPI.post('/ratings', {
+            await ratingsAPI.post('/ratings', {
                 storeId: ratingStore.id,
                 rating: userRating
             });

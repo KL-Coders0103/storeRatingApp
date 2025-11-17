@@ -67,23 +67,5 @@ export default defineConfig({
         changeOrigin: true
       }
     }
-  },
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name.split('.')[1]
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-            extType = 'img'
-          }
-          if (extType === 'css') {
-            return `assets/css/[name]-[hash][extname]`
-          }
-          return `assets/${extType}/[name]-[hash][extname]`
-        }
-      }
-    }
   }
 })

@@ -13,6 +13,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
 app.use(cors({
   origin: [
     'http://localhost:3000',
@@ -20,7 +21,18 @@ app.use(cors({
   ],
   credentials: true
 }));
+
 app.use(express.json());
+
+app.get('/api/auth/health', (req, res) => {
+  res.json({ 
+    status: 'OK', 
+    message: 'Backend is running',
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development'
+  });
+});
+
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
@@ -30,6 +42,9 @@ app.use('/api/store-owner', storeOwnerRoutes);
 app.use('/api/admin', adminRoutes);
 
 
+app.use('/api/*', (req, res) => {
+  res.status(404).json({ error: 'API endpoint not found' });
+});
 
 const initializeDatabase = async () => {
     const client = await pool.connect();
@@ -68,7 +83,7 @@ const initializeDatabase = async () => {
       )`);
 
       await client.query('COMMIT');
-      console.log("Databse tables initialized successfully");
+      console.log("Database tables initialized successfully");
     } catch (error){
         await client.query('ROLLBACK');
         console.error('Database initialization error', error);
@@ -80,7 +95,8 @@ const initializeDatabase = async () => {
 initializeDatabase();
 
 app.listen(PORT, () =>{
-    console.log(`Server running on port ${PORT}`);
+    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(`🌐 Health check: http://localhost:${PORT}/api/auth/health`);
 });
 
 export {pool};
