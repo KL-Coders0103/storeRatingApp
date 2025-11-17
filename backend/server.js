@@ -42,8 +42,19 @@ app.use('/api/store-owner', storeOwnerRoutes);
 app.use('/api/admin', adminRoutes);
 
 
-app.use('/api/*', (req, res) => {
-  res.status(404).json({ error: 'API endpoint not found' });
+app.use('/api/:any', (req, res) => {
+  res.status(404).json({ 
+    error: 'API endpoint not found',
+    requestedPath: req.originalUrl,
+    availableEndpoints: [
+      '/api/auth/*',
+      '/api/users/*', 
+      '/api/stores/*',
+      '/api/ratings/*',
+      '/api/store-owner/*',
+      '/api/admin/*'
+    ]
+  });
 });
 
 const initializeDatabase = async () => {
