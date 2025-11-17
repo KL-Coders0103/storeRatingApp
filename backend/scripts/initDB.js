@@ -1,4 +1,5 @@
 import pool from '../config/database.js'
+import bcrypt from 'bcryptjs'
 
 const initDatabase = async () => {
   try {
@@ -41,7 +42,7 @@ const initDatabase = async () => {
 
     console.log('✅ Database tables created successfully')
 
-    const bcrypt = require('bcryptjs')
+    
     const hashedPassword = await bcrypt.hash('Admin123!', 12)
     
     await pool.query(
