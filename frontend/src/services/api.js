@@ -19,7 +19,7 @@ export const storesAPI = axios.create({
   },
 })
 
-export const ratingsAPI = axios.create({
+export const ratingAPI = axios.create({
   baseURL: BASE_URL,
   headers: {
     'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const handleResponseError = (error) => {
   return Promise.reject(error)
 }
 
-[authAPI, storesAPI, ratingsAPI, adminAPI].forEach(api => {
+[authAPI, storesAPI, ratingAPI, adminAPI].forEach(api => {
   api.interceptors.request.use(addAuthToken)
   api.interceptors.response.use(
     response => {
