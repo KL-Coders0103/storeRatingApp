@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { adminAPI } from '../../services/api'
 import { X, User, Mail, MapPin, Calendar, Store, Star, Shield, Building, Edit3 } from 'lucide-react'
 import { motion as  Motion } from 'framer-motion'
-import LoadingSpinner from '../LoadingSpinner'
+import LoadingSpinner from '../Loadingspinner'
 
 const UserDetailsModal = ({ user, onClose, onRoleUpdate }) => {
   const [userDetails, setUserDetails] = useState(null)

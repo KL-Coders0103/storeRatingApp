@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { adminAPI } from '../../services/api'
 import { X, Search, Building } from 'lucide-react'
 import { motion as  Motion } from 'framer-motion'
-import LoadingSpinner from '../LoadingSpinner'
+import LoadingSpinner from '../Loadingspinner'
 
 const CreateStoreModal = ({ onClose, onStoreCreated }) => {
   const [formData, setFormData] = useState({

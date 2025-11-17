@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { adminAPI } from '../services/api'
 import { Users, Search, UserPlus, Eye, Shield, Building } from 'lucide-react'
 import { motion as  Motion } from 'framer-motion'
-import LoadingSpinner from '../components/LoadingSpinner'
+import LoadingSpinner from '../components/Loadingspinner'
 import CreateUserModal from '../components/admin/CreateUserModal'
 import UserDetailsModal from '../components/admin/UserDetailsModal'
 

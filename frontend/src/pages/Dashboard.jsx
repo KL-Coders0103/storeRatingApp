@@ -1,6 +1,6 @@
 import React, {  useEffect, useState } from "react";
 import { useAuth } from "../contexts/AuthContext.js";
-import LoadingSpinner from "../components/LoadingSpinner.jsx";
+import LoadingSpinner from "../components/Loadingspinner.jsx";
 import { storesAPI } from "../services/api.js";
 import { motion as Motion } from "framer-motion";
 import { Star, Store, TrendingUp, Users } from "lucide-react";

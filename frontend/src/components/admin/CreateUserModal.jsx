@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { adminAPI } from '../../services/api'
 import { X, Eye, EyeOff } from 'lucide-react'
 import { motion as  Motion } from 'framer-motion'
-import LoadingSpinner from '../LoadingSpinner'
+import LoadingSpinner from '../Loadingspinner'
 
 const CreateUserModal = ({ onClose, onUserCreated }) => {
   const [formData, setFormData] = useState({

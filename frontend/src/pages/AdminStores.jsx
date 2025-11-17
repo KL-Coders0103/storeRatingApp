@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { adminAPI } from '../services/api'
 import { Store, Search, Filter, Building, Star, User, Plus } from 'lucide-react'
 import { motion as  Motion } from 'framer-motion'
-import LoadingSpinner from '../components/LoadingSpinner'
+import LoadingSpinner from '../components/Loadingspinner'
 import CreateStoreModal from '../components/admin/CreateStoreModal'
 
 const AdminStores = () => {

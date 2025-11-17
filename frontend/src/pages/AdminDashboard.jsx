@@ -3,7 +3,7 @@ import { useAuth } from '../contexts/AuthContext'
 import { adminAPI } from '../services/api'
 import { Users, Store, Star, TrendingUp, UserPlus, Building } from 'lucide-react'
 import { motion as  Motion } from 'framer-motion'
-import LoadingSpinner from '../components/LoadingSpinner'
+import LoadingSpinner from '../components/Loadingspinner'
 import { useNavigate } from 'react-router-dom'
 
 const AdminDashboard = () => {
