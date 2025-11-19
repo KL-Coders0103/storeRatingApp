@@ -27,7 +27,7 @@
 - [📂 Project Structure](#-project-structure)
 - [🛡️ Security features](#-security-features)
 - [☁️ Deployment](#️-deployment)
-- [🤝 Support & Troubleshooting](#-sypport-&-troubleshooting)
+- [🤝 Support & Troubleshooting](#-support-&-troubleshooting)
 
 
 ---
