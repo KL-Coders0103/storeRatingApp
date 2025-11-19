@@ -27,7 +27,7 @@
 - [📂 Project Structure](#-project-structure)
 - [🛡️ Security features](#-security-features)
 - [☁️ Deployment](#️-deployment)
-- [🤝 Support & Troubleshooting](#-support-&-troubleshooting)
+- [🤝 Support & Troubleshooting](#-support-troubleshooting)
 
 
 ---
@@ -370,6 +370,7 @@ store-rating-platform/
     * Helmet.js for security headers (recommended for production)
     * Rate limiting implementation (recommended)
 
+---
 
 ## 🌐 Deployment
 
@@ -408,6 +409,7 @@ NODE_ENV=production
 # Frontend  
 VITE_API_URL=https://your-backend.onrender.com/api
 ```
+---
 
 ## 📞 Support & Troubleshooting
 
