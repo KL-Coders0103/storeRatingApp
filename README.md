@@ -26,7 +26,7 @@
 - [🔗 API Documentation](#-api-documentation)
 - [📂 Project Structure](#-project-structure)
 - [🛡️ Security features](#-security-features)
-- [☁️ Deployment](#️-deployment)
+- [☁️ Deployment](#-deployment)
 - [🤝 Support & Troubleshooting](#-support-troubleshooting)
 
 
